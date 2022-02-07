@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang = "pl">
+
+<head>
+    <title>Fakebook</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    </head>
+    <body>
+
+    <div class="navbar">
+        <p>
+            <img id="logo" src="{% static 'logo.jpg' %}">
+            <a href="/" >Main Page</a>  |
+            <a href="{{user.account.get_absolute_url}}">Profile</a>
+            <a href="/requests">Invitations</a>
+            <a href="/settings">Settings</a >  |
+            <a href="/logout">Log Out</a></p>
+    </div>
+    <div class="content">
+        {%block content%}
+        replace me
+        {%endblock%}
+    </div>
+
+    </body>
+</html>
